@@ -1,0 +1,287 @@
+$size-Mobile: 375px;
+$size-Desktop: 1440px;
+
+// Colors Primary
+
+$color-Pink: hsl(322, 100%, 66%);
+
+// Colors Neutral
+
+$color-Very-Pale-Cyan: hsl(193, 100%, 96%);
+$color-Very-Dark-Cyan: hsl(192, 100%, 9%);
+$color-Grayish-Blue: hsl(208, 11%, 55%);
+
+// Typography Body Copy
+
+$size-Font-size: 18px;
+
+// Typography Headings
+
+// Family: [Poppins](https://fonts.google.com/specimen/Poppins) - Weights: 600
+$typ-font-family-headings: "Poppins", sans-serif;
+
+// Typography Body, Call-to-actions
+
+// Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans) - Weights: 400, 700
+$typ-font-family-body: "Open Sans", sans-serif;
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+}
+
+#container {
+    width: 100%;
+}
+
+//boton pink que va en el header y en el footer
+.big-button {
+    width: 240px;
+    height: 42px;
+    background-color: $color-Pink;
+    border: none;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    color: $color-Very-Pale-Cyan;
+}
+
+// cards que van dentro del main
+.card {
+    width: 100%;
+    margin: 20px 0px;
+    padding: 38px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 5px $color-Grayish-Blue;
+
+    .card-image {
+        width: 85%;
+        margin-bottom: 65px;
+        > img {
+            width: 100%;
+        }
+    }
+
+    .card-info {
+        text-align: center;
+
+        > h2 {
+            margin-bottom: 22px;
+            font-family: $typ-font-family-headings;
+            font-size: 1.2em;
+            color: $color-Very-Dark-Cyan;
+        }
+
+        > p {
+            font-family: $typ-font-family-body;
+            font-size: 0.8em;
+            font-weight: 400;
+            line-height: 1.5em;
+            color: $color-Grayish-Blue;
+        }
+    }
+}
+
+#header {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 22px;
+    background-color: $color-Very-Pale-Cyan;
+    background-image: url(../images/bg-hero-mobile.svg);
+    background-repeat: no-repeat;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, auto);
+
+    #navbar {
+        width: 100%;
+        margin-bottom: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #navbar-logo {
+            width: 105px;
+            > img {
+                width: 100%;
+            }
+        }
+        #navbar-button {
+            width: 100px;
+            height: 23px;
+            background-color: white;
+            color: $color-Very-Dark-Cyan;
+            border: none;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+    }
+
+    #intro {
+        width: 100%;
+        margin-bottom: 33px;
+        padding: 0px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        > h1 {
+            font-family: $typ-font-family-headings;
+            margin: 0px;
+            margin-bottom: 18px;
+            font-size: 1.4em;
+            text-align: center;
+            line-height: 1.4em;
+            color: $color-Very-Dark-Cyan;
+        }
+        > p {
+            margin: 0px;
+            margin-bottom: 25px;
+            text-align: center;
+            line-height: 1.4em;
+            color: $color-Very-Dark-Cyan;
+        }
+    }
+
+    #header-image {
+        width: 100%;
+        margin-bottom: 15px;
+
+        > img {
+            width: 100%;
+        }
+    }
+}
+
+#main {
+    width: 100%;
+    margin-bottom: 100px;
+    padding: 0px 22px 0px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+#footer {
+    width: 100%;
+    padding: 0px 10px 50px 10px;
+    background-image: url(../images/bg-footer-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 0px 110px;
+    color: $color-Very-Pale-Cyan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #footer-card {
+        width: 100%;
+        margin-bottom: 70px;
+        padding: 40px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        box-shadow: 0px 0px 5px $color-Grayish-Blue;
+        border-radius: 15px;
+
+        > h2 {
+            font-family: $typ-font-family-headings;
+            font-size: 1em;
+            color: $color-Very-Dark-Cyan;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+    }
+
+    #footer-info {
+        width: 100%;
+        padding: 0px 10px;
+
+        #footer-contact {
+            #footer-logo {
+                width: 170px;
+                > img {
+                    width: 100%;
+                    margin-bottom: 30px;
+                    filter: brightness(0%) invert(100%);
+                }
+            }
+
+            .footer-item {
+                margin-bottom: 30px;
+                display: flex;
+                justify-content: start;
+                align-items: flex-start;
+
+                .footer-info-image {
+                    margin-top: 5px;
+                    margin-right: 25px;
+                }
+
+                p {
+                    font-size: 0.9em;
+                    line-height: 1.5em;
+                }
+            }
+        }
+
+        .footer-links {
+            .links {
+                > a {
+                    display: block;
+                    margin-bottom: 20px;
+                    color: $color-Very-Pale-Cyan;
+                    text-decoration: none;
+                }
+            }
+            #links-3 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                #icons-bar {
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+                    display: flex;
+
+                    .net-icon {
+                        width: 35px;
+                        margin: 5px;
+                        filter: brightness(0%) invert(100%);
+                    }
+                }
+
+                #copyright {
+                    font-size: 0.6em;
+                }
+            }
+        }
+    }
+}
+
+#frontendmentor-footer {
+    > p {
+        color: $color-Very-Dark-Cyan;
+        font-size: 0.6rem;
+        > a {
+            color: $color-Pink;
+            text-decoration: none;
+            font-size: 0.6rem;
+        }
+    }
+}
