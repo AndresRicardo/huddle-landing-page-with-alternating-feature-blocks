@@ -25,6 +25,10 @@ body {
   color: #ebfbff;
 }
 
+.big-button:hover {
+  filter: opacity(40%);
+}
+
 .card {
   width: 100%;
   margin: 20px 0px;
@@ -211,7 +215,6 @@ body {
 #footer #footer-info .footer-links #links-3 #icons-bar .net-icon {
   width: 35px;
   margin: 5px;
-  filter: brightness(0%) invert(100%);
 }
 #footer #footer-info .footer-links #links-3 #copyright {
   font-size: 0.6em;
