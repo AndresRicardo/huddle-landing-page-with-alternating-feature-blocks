@@ -1,6 +1,6 @@
-# Frontend Mentor - Chat app CSS illustration solution
+# Frontend Mentor - Huddle landing page with alternating feature blocks solution
 
-This is a solution to the [Chat app CSS illustration challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/chat-app-css-illustration-O5auMkFqY). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Huddle landing page with alternating feature blocks challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -18,7 +18,7 @@ This is a solution to the [Chat app CSS illustration challenge on Frontend Mento
 
 ## Overview
 
-This challenge was made using just HTML and CSS (SASS, Flexbox), i think develop it using Grid but it was not the best idea because the best tool to use in this case was flexbox, this project was thinking in mobile first.
+This challenge was made using just HTML and CSS (SASS, Flexbox and Grid).
 
 ### The challenge
 
@@ -28,14 +28,16 @@ Users should be able to:
 
 ### Screenshot
 
-![Mobile version screenshot](./screenshots/mobile-screenshot.png)
+![Mobile version screenshot](./screenshots/mobile-screenshot-1.png)
+
+![Mobile version screenshot](./screenshots/mobile-screenshot-2.png)
 
 ![Destop version screenshot](./screenshots/desktop-screenshot.png)
 
 ### Links
 
--   Solution URL: [Github repository](https://github.com/AndresRicardo/chat-app-css-illustration-master)
--   Live Site URL: [Github page](https://andresricardo.github.io/chat-app-css-illustration-master/)
+-   Solution URL: [Github repository](https://github.com/AndresRicardo/huddle-landing-page-with-alternating-feature-blocks)
+-   Live Site URL: [Github page](https://andresricardo.github.io/huddle-landing-page-with-alternating-feature-blocks/)
 
 ## My process
 
@@ -45,64 +47,51 @@ Until now i am just learning web development, by now i just know html and css (f
 
 -   Semantic HTML5 markup
 -   CSS custom properties
--   Flexbox
+-   Css Flexbox
+-   Css Grid
 -   Css pre-processor sass
 -   Mobile-first workflow
 
 ### What I learned
 
-doing this challenge i learned basics of after and before elements, and z-index attribute.
+doing this challenge i learned basics of Css Grid.
 
 ```css
-body {
-    #after {
-        z-index: -0;
-        width: 420px;
-        height: 700px;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        border-bottom-left-radius: 220px;
-        border-bottom-right-radius: 220px;
+ #header {
+        grid-template-columns: 4fr 6fr;
+        grid-template-rows: auto 1fr;
+        row-gap: 60px;
+        column-gap: 50px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 45px 80px 30px 80px;
 
-        background: linear-gradient(
-            to top,
-            $color-Light-Violet,
-            $color-Light_Magenta
-        );
-    }
-}
-#container {
-    height: 100vh;
-    background-image: none;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-#mobile {
-    z-index: 1;
-    width: 245px;
-    margin: 0px 50px 0px auto;
-}
-#main {
-    z-index: 1;
-    width: 400px;
-    margin: 0px auto 0px 50px;
+        #navbar {
+            margin-bottom: 50px;
+            grid-column: 1 / 3;
 
-    #page-title {
-        text-align: left;
-        margin-left: auto;
-    }
-    #page-description {
-        text-align: left;
-    }
-}
+            margin: 0px;
+
+            #navbar-logo {
+                width: 200px;
+                > img {
+                    width: 100%;
+                }
+            }
+
+            #navbar-button {
+                width: 200px;
+                height: 50px;
+                font-size: 12px;
+                font-weight: 700;
+            }
+        }
 ```
 
 ### Continued development
 
 Even if to me is more complex design mobile first, i preffer to continue develop of this way.
-By now in short time, my next skills to develop are css grid, css frameworks (boostrap or tailwind), css pre-preocessor (sass), css post-processors (postcss), pure Javascript, typescript and css-framework (angular).
+By now in short time, my next skills to develop are css frameworks (boostrap or tailwind), css post-processors (postcss), pure Javascript, typescript and css-framework (angular).
 
 ### Useful resources
 
